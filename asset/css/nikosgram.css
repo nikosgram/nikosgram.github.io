@@ -117,3 +117,19 @@ html {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+.up-arr {
+  text-align: center;
+  font-size: 20px;
+  transition: font-size 0.5s linear;
+}
+.up-arr:hover {
+  font-size: 30px;
+}
+.down-arr {
+  text-align: center;
+  font-size: 20px;
+  transition: font-size 0.5s linear;
+}
+.down-arr:hover {
+  font-size: 30px;
+}
