@@ -46,7 +46,7 @@ $(function() {
 
 
         if (object.prevPageToken != undefined) {
-          lvpi.append('<div class="col-md-12 up-arr"><i class="fa fa-chevron-up" data-page="' + object.prevPageToken + '"></i></div>');
+          lvpi.append('<div class="col-md-12 up-arr"><i class="fa fa-chevron-up" style="display: none;" data-page="' + object.prevPageToken + '"></i></div>');
         }
 
         var videos = object.items;
@@ -67,7 +67,7 @@ $(function() {
         });
 
         if (object.nextPageToken != undefined) {
-          lvpi.append('<div class="col-md-12 down-arr"><i class="fa fa-chevron-down" data-page="' + object.nextPageToken + '"></i></div>');
+          lvpi.append('<div class="col-md-12 down-arr"><i class="fa fa-chevron-down" style="display: none;" data-page="' + object.nextPageToken + '"></i></div>');
         }
 
         if (updatePlayer) {
@@ -105,7 +105,7 @@ $(function() {
 
     if (live.stream != null) {
       var stream = live.stream;
-      $('html').css('background-image', 'url("' + stream.preview.template.replace('{width}x{height}', '1920x1080') + '")');
+      $('body').css('background-image', 'url("' + stream.preview.template.replace('{width}x{height}', '1920x1080') + '")');
 
       var lvpi = $('[data-lvpi]');
       var lvpc = $('[data-lvpc]');
@@ -138,7 +138,7 @@ $(function() {
 
         $.getJSON(_SCOPE[0] + 'channels?part=brandingSettings&id=' + channelID + '&key=' + _ID[0], function(brandingSettings) {
           var brandingSettings = brandingSettings.items[0].brandingSettings;
-          $('html').css('background-image', 'url("' + brandingSettings.image.bannerTvHighImageUrl + '")');
+          $('body').css('background-image', 'url("' + brandingSettings.image.bannerTvHighImageUrl + '")');
         });
         $.getJSON(_SCOPE[0] + 'channels?part=snippet&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(channel) {
           var snippet = channel.items[0].snippet;
@@ -162,6 +162,18 @@ $(function() {
     player.find('iframe').fadeOut('slow', function() {
       player.empty();
       player.append('<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + video + '?rel=0&controls=0&autoplay=1" frameborder="0" allowfullscreen>');
+    });
+  });
+
+  $(document).on("mouseenter", '[data-lvpi]', function() {
+    $.each($('[data-page]'), function() {
+      $(this).fadeIn('fast');
+    });
+  });
+
+  $(document).on("mouseleave", '[data-lvpi]', function() {
+    $.each($('[data-page]'), function() {
+      $(this).fadeOut('fast');
     });
   });
 
