@@ -65,6 +65,9 @@ $.allHash = function() {
 }
 
 $(function() {
+  var API = 'https://www.googleapis.com/youtube/v3/';
+  var KEY = 'AIzaSyD2OyY85uKKWhHQpveTUwDC8ITbMglJ4ts';
+
   $(document).on('ready', function() {
     window.location.hash = window.location.hash;
     window.onhashchange(true);
@@ -90,7 +93,7 @@ $(function() {
           $.addHash('search', value.trim().replace(/ /g, '+'));
         }
       }
-    }, 500);
+    }, 350);
   });
 
   window.onhashchange = function(startup) {
@@ -101,8 +104,11 @@ $(function() {
           $('.search').removeClass('vertical-center');
         }
       }
-
-
+    } else {
+      if (!$('.search').hasClass('vertical-center')) {
+        $('input[type=search]').val('');
+        $('.search').addClass('vertical-center');
+      }
     }
   }
 });

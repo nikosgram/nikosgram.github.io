@@ -3,9 +3,16 @@
  * Copyright 2015 Nikos Grammatikos. https://goo.gl/GhQOPn
  * Licensed under the MIT license
  */
+
 html, body {
   height: 100%;
   margin: 0;
+}
+body {
+  background-image: url('/asset/img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 body fotter {
   display: block;
@@ -52,6 +59,9 @@ footer .bar .right > a {
   margin: 0 !important;
   font-family: arial, sans-serif;
 }
+.search {
+  padding-top: 20px;
+}
 .search input[type=search] {
   max-width: 584px;
   margin: 0 auto;
@@ -76,6 +86,7 @@ footer .bar .right > a {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .vertical-center {
