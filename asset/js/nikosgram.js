@@ -129,14 +129,14 @@ $(function() {
     } else {
       $.getJSON(_SCOPE[0] + 'channels?part=contentDetails&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(object) {
         if (object.items.length <= 0) {
-          $.getJSON(_SCOPE[0] + 'channels?part=contentDetails&id=' + _USERNAME[0] + '&key=' + _ID[0], function(new) {
-            if (new.items.length <= 0) {
+          $.getJSON(_SCOPE[0] + 'channels?part=contentDetails&id=' + _USERNAME[0] + '&key=' + _ID[0], function(newObject) {
+            if (newObject.items.length <= 0) {
               alert('I can\'t find this channel in youtube.com.');
               return;
             }
 
-            _UPLOAD[0] = new.items[0].contentDetails.relatedPlaylists.uploads;
-            var channelID = new.items[0].id;
+            _UPLOAD[0] = newObject.items[0].contentDetails.relatedPlaylists.uploads;
+            var channelID = newObject.items[0].id;
 
             $.getJSON(_SCOPE[0] + 'channels?part=brandingSettings&id=' + channelID + '&key=' + _ID[0], function(brandingSettings) {
               var brandingSettings = brandingSettings.items[0].brandingSettings;
