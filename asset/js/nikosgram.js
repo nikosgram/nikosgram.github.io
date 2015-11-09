@@ -142,7 +142,7 @@ $(function() {
               var brandingSettings = brandingSettings.items[0].brandingSettings;
               $('body').css('background-image', 'url("' + brandingSettings.image.bannerTvHighImageUrl + '")');
             });
-            $.getJSON(_SCOPE[0] + 'channels?part=snippet&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(channel) {
+            $.getJSON(_SCOPE[0] + 'channels?part=snippet&id=' + channelID + '&key=' + _ID[0], function(channel) {
               var snippet = channel.items[0].snippet;
 
               $('title').html(snippet.title);
@@ -161,7 +161,7 @@ $(function() {
           var brandingSettings = brandingSettings.items[0].brandingSettings;
           $('body').css('background-image', 'url("' + brandingSettings.image.bannerTvHighImageUrl + '")');
         });
-        $.getJSON(_SCOPE[0] + 'channels?part=snippet&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(channel) {
+        $.getJSON(_SCOPE[0] + 'channels?part=snippet&id=' + channelID + '&key=' + _ID[0], function(channel) {
           var snippet = channel.items[0].snippet;
 
           $('title').html(snippet.title);
