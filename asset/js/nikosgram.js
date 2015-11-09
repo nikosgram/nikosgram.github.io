@@ -129,7 +129,28 @@ $(function() {
     } else {
       $.getJSON(_SCOPE[0] + 'channels?part=contentDetails&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(object) {
         if (object.items.length <= 0) {
-          alert('I can\'t find this channel in twitch.tv.');
+          $.getJSON(_SCOPE[0] + 'channels?part=contentDetails&id=' + _USERNAME[0] + '&key=' + _ID[0], function(new) {
+            if (new.items.length <= 0) {
+              alert('I can\'t find this channel in youtube.com.');
+              return;
+            }
+
+            _UPLOAD[0] = new.items[0].contentDetails.relatedPlaylists.uploads;
+            var channelID = new.items[0].id;
+
+            $.getJSON(_SCOPE[0] + 'channels?part=brandingSettings&id=' + channelID + '&key=' + _ID[0], function(brandingSettings) {
+              var brandingSettings = brandingSettings.items[0].brandingSettings;
+              $('body').css('background-image', 'url("' + brandingSettings.image.bannerTvHighImageUrl + '")');
+            });
+            $.getJSON(_SCOPE[0] + 'channels?part=snippet&forUsername=' + _USERNAME[0] + '&key=' + _ID[0], function(channel) {
+              var snippet = channel.items[0].snippet;
+
+              $('title').html(snippet.title);
+              $('[data-icon]').attr('href', snippet.thumbnails.default.url);
+            });
+
+            updateVideoList(true);
+          });
           return;
         }
 
