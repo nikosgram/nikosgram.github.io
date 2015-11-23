@@ -35,7 +35,7 @@ $(function() {
         var prototype = $('[data-lvpo]');
 
 
-        if (object.prevPageToken != undefined) {
+        if (object.hasOwnProperty("prevPageToken")) {
           lvpi.append('<div class="col-md-12 up-arr"><i class="fa fa-chevron-up" style="display: none;" data-page="' + object.prevPageToken + '"></i></div>');
         }
 
@@ -48,7 +48,7 @@ $(function() {
           );
         });
 
-        if (object.nextPageToken != undefined) {
+        if (object.hasOwnProperty("nextPageToken")) {
           lvpi.append('<div class="col-md-12 down-arr"><i class="fa fa-chevron-down" style="display: none;" data-page="' + object.nextPageToken + '"></i></div>');
         }
 
