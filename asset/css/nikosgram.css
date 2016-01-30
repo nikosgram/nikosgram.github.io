@@ -1,108 +1,73 @@
-body {
-  background-image: url('/asset/img/background.jpg');
-  background-attachment: fixed;
+/*!
+ *  Conduit by @nikosgram17 - http://nikosgram13.github.io/ - @nikosgram13
+ *  License - http://nikosgram13.github.io/LICENSE
+ */
+.conduit {
+    background: url('../img/background.jpg') fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
-body .container {
-  padding: 20px;
-  margin: auto;
-  max-width: 500px;
+
+.conduit [data-search] {
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -ms-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
 }
-img.media-object {
-  min-width: 64px;
-  max-width: 64px;
+
+.conduit .form-control:focus {
+    border-color: #c2272d;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(194, 39, 45, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(194, 39, 45, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(194, 39, 45, 0.6);
 }
-div.row {
-  padding: 10px;
+
+.conduit .container {
+    padding: 20px;
+    margin: auto;
+    max-width: 500px;
 }
-input.search-vec {
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  max-width: 500px;
+
+.conduit img.media-object {
+    min-width: 64px;
+    max-width: 64px;
 }
-.texted {
-  background-color: rgba(0, 0, 0, 0.69);
-  padding: 5px;
-  color: #F0F0F0;
+
+.conduit div.row {
+    padding: 10px;
 }
-.panel {
-  border: 0;
-  transition: padding 0.2s linear;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+
+.conduit input.search-vec {
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 500px;
 }
-.panel:hover {
-  padding: 0 10px;
+
+.conduit .texted {
+    background-color: rgba(0, 0, 0, 0.69);
+    padding: 5px;
+    color: #F0F0F0;
 }
-.loading-cube-grid {
-  width: 40px;
-  height: 40px;
-  margin: 100px auto;
+
+.conduit .panel {
+    border: 0;
+    -webkit-transition: padding .25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    -moz-transition: padding .25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    -ms-transition: padding .25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    -o-transition: padding .25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: padding .25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
-.loading-cube-grid .loading-cube {
-  width: 33%;
-  height: 33%;
-  background-color: #333;
-  float: left;
-  -webkit-animation: loading-cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: loading-cubeGridScaleDelay 1.3s infinite ease-in-out;
-}
-.loading-cube-grid .loading-cube1 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-.loading-cube-grid .loading-cube2 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.loading-cube-grid .loading-cube3 {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-.loading-cube-grid .loading-cube4 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-.loading-cube-grid .loading-cube5 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-.loading-cube-grid .loading-cube6 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.loading-cube-grid .loading-cube7 {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-.loading-cube-grid .loading-cube8 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-.loading-cube-grid .loading-cube9 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-@-webkit-keyframes loading-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
-  }
-}
-@keyframes loading-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
-  }
+
+.conduit .panel:hover {
+    padding: 0 5px;
 }

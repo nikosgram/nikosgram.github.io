@@ -1,140 +1,120 @@
-html, body {
-  height: 100%;
-  margin: 0;
+/*!
+ *  Conduit Channel by @nikosgram17 - http://nikosgram13.github.io/ - @nikosgram13
+ *  License - http://nikosgram13.github.io/LICENSE
+ */
+html, .conduit {
+    height: 100%;
+    margin: 0;
 }
-body {
-  background: -webkit-linear-gradient(left top, #910A0A, #B22222);
-  background: -o-linear-gradient(bottom right, #910A0A, #B22222);
-  background: -moz-linear-gradient(bottom right, #910A0A, #B22222);
-  background: linear-gradient(to bottom right, #910A0A, #B22222);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+.conduit {
+    background: -webkit-linear-gradient(left top, #910A0A, #B22222);
+    background: -o-linear-gradient(bottom right, #910A0A, #B22222);
+    background: -moz-linear-gradient(bottom right, #910A0A, #B22222);
+    background: linear-gradient(to bottom right, #910A0A, #B22222);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.loading-cube-grid {
-  width: 40px;
-  height: 40px;
-  margin: 100px auto;
+
+.conduit .navbar {
+    border-radius: 0;
 }
-.loading-cube-grid .loading-cube {
-  width: 33%;
-  height: 33%;
-  background-color: #333;
-  float: left;
-  -webkit-animation: loading-cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: loading-cubeGridScaleDelay 1.3s infinite ease-in-out;
+
+.conduit .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #333;
 }
-.loading-cube-grid .loading-cube1 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+
+.conduit .container-fluid, .container, .row {
+    height: 100%;
 }
-.loading-cube-grid .loading-cube2 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+
+.conduit .header .latest-videos .video-item {
+    padding: 4px 12px;
 }
-.loading-cube-grid .loading-cube3 {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+
+.conduit .header .latest-videos .video-item img {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    -webkit-transition: margin .25s linear;
+    -moz-transition: margin .25s linear;
+    -ms-transition: margin .25s linear;
+    -o-transition: margin .25s linear;
+    transition: margin .25s linear;
 }
-.loading-cube-grid .loading-cube4 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+
+.conduit .header .latest-videos .video-item img:hover, .header .latest-videos .video-item img:focus, .header .latest-videos .video-item img:active {
+    margin-left: 15px;
 }
-.loading-cube-grid .loading-cube5 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+
+.conduit .header .video-player [data-player] {
+    background-color: #000;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
-.loading-cube-grid .loading-cube6 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+
+.conduit .header .twitch-header {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
-.loading-cube-grid .loading-cube7 {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+
+.conduit .a83 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
-.loading-cube-grid .loading-cube8 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+
+.conduit .down-arr,
+.conduit .up-arr {
+    text-align: center;
 }
-.loading-cube-grid .loading-cube9 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+
+.conduit .step {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
 }
-@-webkit-keyframes loading-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
-  }
+
+.conduit [data-lvpi] .arr {
+    -webkit-transition: font-size .25s ease-in;
+    -moz-transition: font-size .25s ease-in;
+    -ms-transition: font-size .25s ease-in;
+    -o-transition: font-size .25s ease-in;
+    transition: font-size .25s ease-in;
+    display: none;
 }
-@keyframes loading-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
-  }
+
+.conduit [data-lvpi]:hover .arr {
+    display: inline-block;
+    font-size: 20px;
+
+    -webkit-animation: Arrow .25s;
+    -o-animation: Arrow .25s;
+    animation: Arrow .25s;
 }
-.navbar {
-  border-radius: 0;
+
+.conduit [data-lvpi]:hover .arr:hover {
+    font-size: 30px;
 }
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border-color: #333;
-}
-.container-fluid, .container, .row {
-  height: 100%;
-}
-.header .latest-videos .video-item {
-  padding: 4px 12px;
-}
-.header .latest-videos .video-item img {
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
-  transition: margin 0.5s linear;
-}
-.header .latest-videos .video-item img:hover, .header .latest-videos .video-item img:focus, .header .latest-videos .video-item img:active {
-  margin-left: 15px;
-}
-.header .video-player [data-player] {
-  background-color: #000;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
-}
-.header .twitch-header {
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
-}
-.amazon-adsystem-tracking-pixel {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.up-arr {
-  text-align: center;
-  font-size: 20px;
-  transition: font-size 0.5s linear;
-}
-.up-arr:hover {
-  font-size: 30px;
-}
-.down-arr {
-  text-align: center;
-  font-size: 20px;
-  transition: font-size 0.5s linear;
-}
-.down-arr:hover {
-  font-size: 30px;
-}
-.step {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
+
+@keyframes Arrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 20px;
+    }
 }
