@@ -3,7 +3,7 @@
  *  License - http://nikosgram13.github.io/LICENSE
  */
 .conduit {
-    background: url('../img/background.jpg') fixed;
+    background: url('http://loremflickr.com/1920/1080/weather') fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
